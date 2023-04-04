@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mixed Frames</title>
+        <style>
+            body{
+                margin: 0px;
+                display: flex;
+                overflow: hidden;
+            }
+            .ele, .ele2{
+                display: flex;
+                height: 100vh;
+                border: 1px solid black;
+            }
+            .ele{
+                width: 25vw;
+                background-image: url('./flower.jpg');
+                background-size: cover;
+            }
+            .ele2{
+                width: 75vw;
+                flex-direction: column;
+            }
+            .ele2>div{
+                border: 1px solid black;
+                height: 50vh;
+            }
+            video{
+                width: 100%;
+                height: 100%;
+                background: rgb(104, 145, 233);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ele">
+
+        </div>
+        <div class="ele2">
+            <div>
+                <video autoplay>
+                    <source src="./ciphers.mp4">
+                </video>
+            </div>
+            <div style="background-image: url('./lambo.jfif'); background-size: cover; background-repeat: no-repeat;"></div>
+        </div>
+    </body>
+</html>

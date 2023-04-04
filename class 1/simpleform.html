@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple form</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid black;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        form>div {
+            margin: 10px;
+            /* text-align: left; */
+            position: relative;
+            flex-direction: column;
+            display: flex;
+        }
+
+        input {
+            width: 90%;
+            position: relative;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .container{
+            display: flex;
+            margin: 5px;
+        }
+        .container>div{
+            display: flex;
+            margin: 5px;
+        }
+        .subhead{
+            text-align: left;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Form</h1>
+    <form action="" method="get">
+        <div>
+            <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div>
+            <input type="text" name="Address1" id="Address1" placeholder="Address line 1">
+            <input type="text" name="Address2" id="Address2" placeholder="Address line 2">
+        </div>
+        <div >
+            <div class="subhead">
+                <label for="Gender">Gender</label>
+            </div>
+            <div class="container">
+                <div>
+                    <label for="Male">Male</label>
+                    <input type="radio" name="Gender" id="male">
+                </div>
+                <div>
+                    <label for="Male">Female</label>
+                    <input type="radio" name="Gender" id="Female">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="subhead">
+                <label for="">Skills</label>
+            </div>
+            <div class="container">
+                <div>
+                    <label for="Skills">c++</label>
+                    <input type="checkbox" name="Skills" id="Skills" value="C++">
+                </div>
+                <div>
+                    <label for="Skills">Java</label>
+                    <input type="checkbox" name="Skills" id="Skills" value="C++">
+                </div>
+                <div>
+                    <label for="Skills">Python</label>
+                    <input type="checkbox" name="Skills" id="Skills" value="C++">
+                </div>
+                <div>
+                    <label for="Skills">SQl</label>
+                    <input type="checkbox" name="Skills" id="Skills" value="C++">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="subhead">
+                <label for="act">Extracurricular Activities</label>
+            </div>
+            <textarea name="" id="" cols="60" rows="10"></textarea>
+        </div>
+        <div>
+            <div class="subhead">
+                <label for="Nationality">Nationality</label>
+            </div>
+            <select name="Nationality" id="Nationality">
+                <option value="India">India</option>
+                <option value="America">America</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </div>
+        <div style="text-align: center;">
+            <input type="submit" value="Submit" placeholder="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

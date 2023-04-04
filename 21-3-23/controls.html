@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is for time pass</title>
+</head>
+
+<body>
+    <h1>
+        Control Statments
+    </h1>
+    <ol>
+        <li>
+            <h3>If Statments</h3>
+            <p>It doesn't include else.</p>
+        </li>
+        <li>
+            <h3>if-else Statments</h3>
+            <p>It includes both if and else. It is used for handling both the situatuins of a single condition.</p>
+        </li>
+        <li>
+            <h3>if-(else-if)-else</h3>
+            <p>It is very useful while handling multiple conditions. It helps to handle multiple results can happen.</p>
+            <p><input type="number" oninput="grade(this)" max="100" placeholder="Enter your marks"></p>
+            <div>Your garde is <span><b id="Grad"></b></span></div>
+            <script>
+                function grade(o) {
+                    m = o.value;
+                    g = document.getElementById('Grad');
+                    if (m >= 90) {
+                        g.innerHTML = "A";
+                    }
+                    else if (m >= 80) {
+                        g.innerHTML = "B";
+                    }
+                    else if (m >= 70) {
+                        g.innerHTML = "C";
+                    }
+                    else if (m >= 60) {
+                        g.innerHTML = "D";
+                    }
+                    else {
+                        g.innerHTML = "F";
+                    }
+                }
+            </script>
+        </li>
+    </ol>
+
+    <h1>JavaScript Function</h1>
+    <p>multiplying two numbers</p>
+    <p><input type="number" id="A" placeholder="A">*<input type="number" oninput="execute(this)" placeholder="B"></p>
+    <div id="result"></div>
+    <script>
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function execute(B) {
+            r = multiply(document.getElementById("A").value, B.value);
+            document.getElementById('result').innerHTML = r;
+        }
+        console.log(multiply(2, 3));
+    </script>
+
+    <h1>JavaScript Date object</h1>
+    <p>Create a new object with current date and time.</p>
+    <p>we can get specific time by providing <b>(year, month, day, hour, minute, sec, millisecond)</b></p>
+    <div>Today's date is <span id="demo"></span></div>
+    <script>
+        const d = new Date();
+        // (year, month, day, hour, minute, sec, millisecond)
+        document.getElementById("demo").innerHTML = d.getFullYear();
+    </script>
+
+    <h1>JavaScript Loops</h1>
+    <ol>
+        <li>
+            <h3>For Loop</h3>
+            <p>It is a type of looping in JavaScript.</p>
+            <p><input type="number" oninput="table(this)" placeholder="Enter your number"></p>
+            <p id="table"></p>
+            <script>
+                function table(tab){
+                    v = tab.value;
+                    board = document.getElementById("table");
+                    board.innerHTML = "";
+                    for(i=1; i<=10; i++){
+                        board.innerHTML += `<div>`+v+`*`+i+`=`+(i*v)+`</div>`
+                    }
+                }
+            </script>
+        </li>
+        <li>
+            <h3>While loop</h3>
+            <p>It is another type of JavaScript loop.</p>
+            <p>Example Enter this(BMW, Volvo, Ford, Audi, Maruti) in the input box below</p>
+            <p><textarea type="text" oninput="print(this.value)" placeholder="Enter name with commas"></textarea></p>
+            <p id="named"></p>
+            <script>
+                function print(v){
+                    v = v.split(",");
+                    named = document.getElementById("named");
+                    named.innerHTML = "";
+                    i = 0;
+                    while(i<v.length){
+                        named.innerHTML += "<div>"+v[i]+"</div>";
+                        i++;
+                    }
+                }
+            </script>
+        </li>
+    </ol>
+</body>
+
+</html>

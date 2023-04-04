@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Tilak</title>
+    </head>
+    <body>
+        <h1 id="quote"></h1>
+        <h3 id="author"></h3>
+        <script>
+            function thought_author(){
+                var author = new Array();
+                var quotes = new Array();
+                quotes[0] = "Honesty is the best policy";
+                quotes[1] = "You♥";
+                author[0] = "sehbfcksjb";
+                author[1] = "skejncfks";
+                index = Math.floor(Math.random()*quotes.length)
+                // alert(quotes[index]+"-"+author[index]);
+                q = document.getElementById("quote");
+                q.innerHTML = quotes[index];
+                a = document.getElementById('author');
+                a.innerHTML = author[index];
+                setTimeout(thought_author, 1000);
+            }
+            
+
+            setInterval(function(){
+                var author = new Array();
+                var quotes = new Array();
+                quotes[0] = "Honesty is the best policy";
+                quotes[1] = "You♥";
+                author[0] = "sehbfcksjb";
+                author[1] = "skejncfks";
+                index = Math.floor(Math.random()*quotes.length);
+                q = document.getElementById("quote");
+                q.innerHTML = quotes[index];
+                a = document.getElementById('author');
+                a.innerHTML = author[index];
+            }, 1000);
+        </script>
+    </body>
+</html>

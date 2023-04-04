@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tableName"></h1>
+    <table id="XML">
+        
+    </table>
+    <script>
+        var data;
+        var content;
+        parser = new DOMParser();
+        xml = new XMLHttpRequest();
+        xml.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                data = parser.parseFromString(xml.responseText, 'text/xml');
+                table = data.children[0];
+                table_name = table.tagName;
+                document.getElementById("tableName").innerText = table_name;
+                for(i=0; i<table.children.length; i++){
+                    EachRow = table.children[i].children;
+                    for(r=0; r<EachRow.length; r++){
+                        if(r==0){
+                            
+                        }
+                        content += "<td>"+EachRow[r].innerText+"</td>"
+                    }
+                }
+                document.getElementById("XML").innerHTML = content;
+            }
+        }
+
+        xml.open("GET", "/23-3-23/content.xml", true);
+        xml.send();
+
+    </script>
+</body>
+</html>
